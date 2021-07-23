@@ -13,7 +13,7 @@ Write a simple browser based app (with whatever technologies you prefer) that do
   "name": "Singleton Corp",
   "id":0,
   "facilities":[
-    {
+    { 
       "name":"Atlanta",
       "coord":[33.749,-84.388],
       "id":1

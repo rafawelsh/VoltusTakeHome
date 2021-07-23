@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import WrappedMap from '../mapView/MapView'
 
 function SearchOrg() {
     const [organization, setOrg] = useState({});
@@ -27,7 +28,13 @@ function SearchOrg() {
 
     return (
         <div>
-            Hi
+            <div style={{ width: '100vw', height: '100vh'}}>
+                <WrappedMap googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBCaIQ2eJA8DGOi50k26FbMZsgwCWJny68'}
+                loadingElement={<div style={{ height: '100%' }} />}
+                containerElement={<div style={{ height: '100%' }} />}
+                mapElement={<div style={{ height: '100%' }} />}
+                />
+            </div>
         </div>
     )
 }
