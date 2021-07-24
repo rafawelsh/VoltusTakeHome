@@ -3,23 +3,20 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-map
 
 function Map(facilities) {
     const [selectedPark, setSelectedPark] = useState(null)
-    if (!facilities) return null
-    // facilities = [...facilities]
-    // console.log(facilities)
-    // console.log([facilities])
-    // console.log(Object.values(facilities)[0])
-    // console.log(Object.values(facilities))
-    
-    // console.log(facilities.facilities)
+    if (!facilities.facilities) return null
+
     const places = Object.values(facilities)[0]
+    console.log(facilities)
+    console.log(typeof places)
+    console.log(places)
     for (const {name: n, coord: c, id: idx, threshold: t} of Object.values(facilities)[0]) {
         console.log(n)
     }
     
     return (
         <GoogleMap 
-            defaultZoom={10} 
-            defaultCenter={{lat:33.749, lng:-84.388}}
+            defaultZoom={6} 
+            defaultCenter={{lat:places[0].coord[0], lng:places[0].coord[1]}}
         >
             {places.map((facility) => (
                 <Marker 
