@@ -23,7 +23,7 @@ function FacilityReader(places) {
     return (
         <form onSubmit={handleSubmit}>
             <select name="cars" id="cars" value={location} onChange={handleSelect}>
-                <option value="none" selected>
+                <option value="none" defaultValue>
                     Select
                 </option>
             {places.places.map(location => {
