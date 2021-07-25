@@ -1,14 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import FacilityReader from './FacilityReader'
-/**
- * Top panel
- * 
- * 
- * 
- * Bottom panel:
- *  Needs the facility names (props from SearchOrg.js)
- * 
- */
+
 function LeftPanel(facilities) {
     const [kilowatts, setKilowatts] = useState(0)
     if (!facilities.facilities) return null
@@ -18,6 +10,7 @@ function LeftPanel(facilities) {
     return (
         <div style={{display: 'flex', flexDirection: 'column', justifyContent:'space-around'}}>
             <FacilityReader places={places} style={{height: '50vh'}}/>
+
             <table style={{height: '50vh'}}>
                 <thead>
                     <tr>
@@ -30,7 +23,7 @@ function LeftPanel(facilities) {
                 {places.map((facility) => {
                     return (
                         <tr key={facility.id} 
-                        style={ facility.id%2===0 ? { backgroundColor:'white'} : {backgroundColor:'#007eff47'} }>
+                        style={ facility.id%2===0 ? { backgroundColor:'white'} : {backgroundColor:'#007eff47'}}>
                             <td>{facility.name}</td>
                             <td>{kilowatts} kw</td>
                             <td>time</td>

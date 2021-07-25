@@ -1,33 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import WrappedMap from '../mapView/MapView'
 import LeftPanel from '../leftPanel/LeftPanel'
 
-function SearchOrg() {
-    const [organization, setOrg] = useState({});
-
-    useEffect(() => {
-        lookUpOrganization()
+function SearchOrg(facilities) {
+    if (!facilities.facilities) return null
     
-    }, [setOrg])
-
-    async function lookUpOrganization() {
-        await fetch(`http://challenge.voltus.co/facilities/1`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            return setOrg(data)
-        })
-        .catch(err => console.error(err))
-    }
+    //extracting from nested object
+    facilities = facilities.facilities
     
-
-    //destructe organization data
-    console.log(organization)
-    const {id, facilities, name} = organization
-    // for (const {name: n} of Object.values(facilities)[0]) {
-    //     console.log(n)
-    // }
-
     return (
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
 

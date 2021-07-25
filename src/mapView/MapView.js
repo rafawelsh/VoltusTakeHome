@@ -6,12 +6,12 @@ function Map(facilities) {
     if (!facilities.facilities) return null
 
     const places = Object.values(facilities)[0]
-    console.log(facilities)
-    console.log(typeof places)
-    console.log(places)
-    for (const {name: n, coord: c, id: idx, threshold: t} of Object.values(facilities)[0]) {
-        console.log(n)
-    }
+    // console.log(facilities)
+    // console.log(typeof places)
+    // console.log(places)
+    // for (const {name: n, coord: c, id: idx, threshold: t} of Object.values(facilities)[0]) {
+    //     console.log(n)
+    // }
     
     return (
         <GoogleMap 

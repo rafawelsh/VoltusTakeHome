@@ -7,7 +7,7 @@ We're getting the green light! Voltus is building a command center dashboard for
 
 Write a simple browser based app (with whatever technologies you prefer) that does the following:
 
-1. Given a parameter provided on page request (e.g. either as a route, querystring, etc.) issues an HTTP GET request against this web api: `http://challenge.voltus.co/facilities/<organization_id: int>`. The response of this is a json object that might look something like this:
+[x] 1. Given a parameter provided on page request (e.g. either as a route, querystring, etc.) issues an HTTP GET request against this web api: `http://challenge.voltus.co/facilities/<organization_id: int>`. The response of this is a json object that might look something like this:
 ```json
 {
   "name": "Singleton Corp",
@@ -28,7 +28,7 @@ Some known organization id's are 1, 2, 3
 
 So, for example if the entrypoint of our app is through index.html, and we're using query strings, `index.html?organization_id=1` should render the dashboard for organization 1.
 
-2. Render a map with some sort of visual cue or marker corresponding to the location of each facility. Don't worry too much about setting the zoom level such that each facility is visible (ballpark is good enough). This map should take up the height of the window, and about 65-75% of the width.
+[x] 2. Render a map with some sort of visual cue or marker corresponding to the location of each facility. Don't worry too much about setting the zoom level such that each facility is visible (ballpark is good enough). This map should take up the height of the window, and about 65-75% of the width.
 
 3. Add a side panel to the left of the map. This panel should should be divided horizontally into two further sections:
    1. The bottom part should display a simple table that has the following columns: `Facility, Reading, Last Update`
