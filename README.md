@@ -10,6 +10,7 @@ We're getting the green light! Voltus is building a command center dashboard for
 
 # Added Libraries
   - [React-Google-Maps](https://www.npmjs.com/package/react-google-maps)
+    - I left my API Key added directly into the URL on `SearchOrg @ line18` in order to have the map working for this presentation.
 
 # Set of Tasks to Accomplish
 - [x] Fetch data
@@ -17,7 +18,7 @@ We're getting the green light! Voltus is building a command center dashboard for
 - [x] Add a side panel to the left of the map. 
     - [x] 1. Insert `Facility, Reading, Last Update`
     The facility column should just contain the name of the facility. For now the reading column can just be defaulted to 0 or 0kW or random values. And the Last Updated can be defaulted to any value.
-    - [x]2. The top part should have inputs for the user to select a facility and input a kW value. This should update the values of `Reading` and `Last Update` in the table, as well as the total.
+    - [x] 2. The top part should have inputs for the user to select a facility and input a kW value. This should update the values of `Reading` and `Last Update` in the table, as well as the total.
 - [x] 4. The header should read the name of the organization
 
 
