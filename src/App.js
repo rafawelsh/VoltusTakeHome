@@ -11,7 +11,7 @@ function App() {
   }, [setOrg])
 
   async function lookUpOrganization() {
-      await fetch(`http://challenge.voltus.co/facilities/3
+      await fetch(`http://challenge.voltus.co/facilities/1
       `)
       .then(response => response.json())
       .then(data => {
