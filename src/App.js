@@ -11,10 +11,10 @@ function App() {
   }, [setOrg])
 
   async function lookUpOrganization() {
-      await fetch(`http://challenge.voltus.co/facilities/1`)
+      await fetch(`http://challenge.voltus.co/facilities/3
+      `)
       .then(response => response.json())
       .then(data => {
-          console.log(data)
           setOrg(data)
       })
       .catch(err => console.error(err))
@@ -23,11 +23,13 @@ function App() {
   const {facilities, name} = organization
 
   return (
-    <div>
-      <header style={{height:'5vh', backgroundColor:'gray', color:'white'}}>{name}</header>
+    <main>
+      <header style={{ backgroundColor:'gray', color:'white'}}>
+        <h1>{name}</h1>
+      </header>
       <SearchOrg facilities={facilities}/>
       
-    </div>
+    </main>
   )
 }
 

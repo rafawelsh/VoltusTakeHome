@@ -11,11 +11,9 @@ function SearchOrg(facilities) {
     return (
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
 
-            
-            <LeftPanel facilities={facilities} />
-            
+            <LeftPanel facilities={facilities} />            
 
-            <div style={{ width: '75vw', height: '100vh'}}>
+            <div style={{ width: '75vw', height: '93vh'}}>
                 <WrappedMap facilities={facilities}
                 googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBCaIQ2eJA8DGOi50k26FbMZsgwCWJny68'}
                 loadingElement={<div style={{ height: '100%' }} />}

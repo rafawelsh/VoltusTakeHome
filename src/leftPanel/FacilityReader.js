@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 
-function FacilityReader(places) {
-    const [input, setInput] = useState('')
+function FacilityReader(places, updateFacility) {
     const [location, setLocation] = useState('')
+    const [input, setInput] = useState('')
+     
     if (!places.places) return null
-    console.log(places)
 
     const handleChange = (e) => {
         setInput(e.target.value)
@@ -15,9 +15,10 @@ function FacilityReader(places) {
     }
 
     const handleSubmit = (e) => {
+        e.preventDefault()
         console.log(input)
         console.log(location)
-        e.preventDefault()
+        updateFacility(location, input)
     }
 
     return (
